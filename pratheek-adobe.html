@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Pratheek P P — Product Manager</title>
+<meta name="description" content="Product Manager at Bren Tech, building the software layer behind how real estate runs.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700;900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#ffffff; --bg2:#f8f8f8; --ink:#2c2c2c; --ink2:#6e6e6e; --line:#e1e1e1; --card:#ffffff;
+  --red:#eb1000; --red-d:#c9190b; --blue:#1473e6; --icon:#1c1c24;
+  --shadow:0 1px 2px rgba(0,0,0,.06),0 8px 24px rgba(0,0,0,.06);
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#1b1b1b; --bg2:#242424; --ink:#f4f4f4; --ink2:#a8a8a8; --line:#3a3a3a; --card:#2b2b2b;
+    --blue:#5aa9ff; --shadow:0 1px 2px rgba(0,0,0,.4),0 8px 24px rgba(0,0,0,.35);
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#1b1b1b; --bg2:#242424; --ink:#f4f4f4; --ink2:#a8a8a8; --line:#3a3a3a; --card:#2b2b2b;
+  --blue:#5aa9ff; --shadow:0 1px 2px rgba(0,0,0,.4),0 8px 24px rgba(0,0,0,.35);
+}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-behavior:smooth;scroll-padding-top:calc(72px + env(safe-area-inset-top,0px));-webkit-text-size-adjust:100%}
+body{
+  margin:0;background:var(--bg);color:var(--ink);
+  font-family:"Adobe Clean","Source Sans 3","Source Sans Pro","Segoe UI","Helvetica Neue",Arial,sans-serif;
+  font-size:18px;line-height:1.5;-webkit-font-smoothing:antialiased;
+}
+a{color:var(--blue);text-decoration:none}
+a:hover{text-decoration:underline}
+:focus-visible{outline:3px solid var(--blue);outline-offset:3px;border-radius:6px}
+.wrap{max-width:1200px;margin:0 auto;padding:0 32px}
+
+/* Nav */
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:10;background:var(--bg);border-bottom:1px solid var(--line);height:64px}
+nav .wrap{height:100%;display:flex;align-items:center;gap:40px}
+.logo{display:flex;align-items:center;gap:12px;color:var(--ink);font-weight:700;font-size:18px}
+.logo:hover{text-decoration:none}
+.logo i{width:32px;height:30px;background:var(--red);border-radius:4px;display:grid;place-items:center;color:#fff;font-style:normal;font-size:15px;font-weight:900;letter-spacing:-.02em}
+nav ul{display:flex;gap:28px;list-style:none;margin:0 auto 0 0;padding:0}
+nav ul a{color:var(--ink);font-size:16px;font-weight:600}
+nav ul a:hover{text-decoration:none;box-shadow:0 2px 0 var(--ink)}
+.pill{display:inline-block;padding:11px 24px;border-radius:999px;font-weight:700;font-size:16px;line-height:1.2;border:2px solid transparent;cursor:pointer}
+.pill:hover{text-decoration:none}
+.pill.red{background:var(--red);color:#fff}
+.pill.red:hover{background:var(--red-d)}
+.pill.line{border-color:var(--ink);color:var(--ink);background:transparent}
+.pill.line:hover{background:var(--ink);color:var(--bg)}
+@media (max-width:760px){nav ul{display:none}nav .wrap{justify-content:space-between;gap:12px;padding:0 20px}.logo{font-size:16px;white-space:nowrap}nav .pill{padding:8px 16px;font-size:15px;white-space:nowrap}.wrap{padding:0 20px}}
+
+/* Hero */
+.hero{padding:88px 0 96px;overflow:hidden}
+.hero .wrap{display:grid;grid-template-columns:1.15fr .85fr;gap:56px;align-items:center}
+h1{font-size:clamp(44px,7vw,84px);line-height:1;letter-spacing:-.025em;font-weight:900;margin:0}
+.hero .role{font-size:20px;font-weight:700;color:var(--red);margin:0 0 20px}
+.hero .lede{font-size:clamp(19px,2vw,23px);line-height:1.45;color:var(--ink2);margin:28px 0 0;max-width:32em}
+.hero .cta{display:flex;flex-wrap:wrap;gap:14px;margin-top:36px}
+.art{position:relative;aspect-ratio:1/1;max-width:460px;width:100%;justify-self:center;border-radius:32px;
+  background:radial-gradient(circle at 20% 15%,#ff7a00 0,transparent 45%),radial-gradient(circle at 85% 25%,#7c4dff 0,transparent 50%),radial-gradient(circle at 50% 95%,#eb1000 0,transparent 55%),#2a1b3d}
+.art .ic{position:absolute;width:34%;aspect-ratio:1;border-radius:22%;background:var(--icon);display:grid;place-items:center;
+  font-weight:900;font-size:clamp(28px,5vw,52px);letter-spacing:-.04em;box-shadow:0 18px 40px -10px rgba(0,0,0,.55)}
+.ic.a{left:9%;top:11%;color:#ff9a00;border:2px solid #ff9a00}
+.ic.b{right:9%;top:30%;color:#31c4ff;border:2px solid #31c4ff}
+.ic.c{left:27%;bottom:9%;color:#d77bff;border:2px solid #d77bff}
+.hero .wrap>*{animation:in .8s cubic-bezier(.2,.7,.2,1) both}
+.hero .wrap>*:nth-child(2){animation-delay:.12s}
+@keyframes in{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+@media (max-width:900px){.hero .wrap{grid-template-columns:1fr}.art{max-width:340px;justify-self:start}}
+
+/* Facts band */
+.band{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--bg2)}
+.band .wrap{display:grid;grid-template-columns:repeat(4,1fr)}
+.fact{padding:36px 28px;border-left:1px solid var(--line)}
+.fact:first-child{border-left:0;padding-left:0}
+.fact b{display:block;font-size:clamp(34px,4.4vw,52px);font-weight:900;letter-spacing:-.03em;line-height:1.05}
+.fact span{color:var(--ink2);font-size:16px}
+@media (max-width:820px){.band .wrap{grid-template-columns:repeat(2,1fr)}.fact:nth-child(3){border-left:0;padding-left:0}.fact{border-top:1px solid var(--line)}.fact:nth-child(-n+2){border-top:0}}
+
+/* Sections */
+section{padding:104px 0}
+section.alt{background:var(--bg2)}
+.sh{max-width:760px;margin:0 0 56px}
+h2{font-size:clamp(34px,4.6vw,56px);line-height:1.05;letter-spacing:-.022em;font-weight:900;margin:0}
+.sh p{font-size:clamp(18px,2vw,22px);color:var(--ink2);margin:16px 0 0}
+
+/* Product cards */
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:32px;display:flex;flex-direction:column;transition:box-shadow .2s,transform .2s}
+.card:hover{box-shadow:var(--shadow);transform:translateY(-3px)}
+.card .ic{width:72px;height:72px;border-radius:18px;background:var(--icon);display:grid;place-items:center;font-weight:900;font-size:30px;letter-spacing:-.04em;margin-bottom:28px}
+.card .k{font-size:15px;color:var(--ink2);font-weight:600}
+.card h3{font-size:28px;line-height:1.15;letter-spacing:-.015em;font-weight:900;margin:2px 0 12px}
+.card p{margin:0;color:var(--ink2);font-size:17px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:auto;padding-top:26px}
+.chip{font-size:14px;font-weight:600;padding:5px 12px;border-radius:999px;border:1px solid var(--line);color:var(--ink);background:var(--bg2)}
+.card .ic.o{color:#ff9a00;border:2px solid #ff9a00}.card .ic.u{color:#31c4ff;border:2px solid #31c4ff}.card .ic.p{color:#d77bff;border:2px solid #d77bff}
+@media (max-width:960px){.cards{grid-template-columns:1fr}}
+
+/* Lifecycle */
+.flow{display:grid;grid-template-columns:repeat(6,1fr);position:relative;gap:8px}
+.flow::before{content:"";position:absolute;left:8%;right:8%;top:22px;height:3px;background:linear-gradient(90deg,#ff7a00,#eb1000 50%,#7c4dff);border-radius:2px}
+.fs{position:relative;text-align:center;padding:0 6px}
+.fs i{width:46px;height:46px;border-radius:50%;margin:0 auto 14px;display:grid;place-items:center;background:var(--bg2);border:3px solid var(--red);font-style:normal;font-weight:900;font-size:17px}
+.fs b{font-size:17px;font-weight:700}
+@media (max-width:760px){
+  .flow{grid-template-columns:1fr;gap:0}
+  .flow::before{left:22px;right:auto;top:20px;bottom:20px;width:3px;height:auto;background:linear-gradient(180deg,#ff7a00,#eb1000 50%,#7c4dff)}
+  .fs{display:flex;align-items:center;gap:18px;text-align:left;padding:10px 0}
+  .fs i{margin:0;flex:none}
+}
+
+/* Experience */
+.rows{border-top:2px solid var(--ink)}
+.row{display:grid;grid-template-columns:260px 1fr;gap:32px;padding:30px 0;border-bottom:1px solid var(--line)}
+.row .when{color:var(--ink2);font-weight:600;font-size:17px}
+.row h3{margin:0;font-size:26px;font-weight:900;letter-spacing:-.012em;line-height:1.2}
+.row .org{color:var(--ink2);margin-top:2px}
+.row p{margin:12px 0 0;max-width:46em}
+.badge{display:inline-block;background:var(--red);color:#fff;font-size:13px;font-weight:700;padding:2px 10px;border-radius:999px;margin-left:10px;vertical-align:middle}
+@media (max-width:760px){.row{grid-template-columns:1fr;gap:6px}}
+
+/* Skills */
+.two{display:grid;grid-template-columns:1.1fr .9fr;gap:24px}
+.panel{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:36px}
+.panel h3{font-size:26px;font-weight:900;margin:0 0 22px;letter-spacing:-.012em}
+.skills{display:flex;flex-wrap:wrap;gap:10px}
+.skills .chip{font-size:16px;padding:8px 16px}
+.panel ul{list-style:none;margin:0;padding:0}
+.panel li{padding:12px 0;border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:16px;align-items:baseline}
+.panel li:first-child{border-top:0;padding-top:0}
+.panel li small{color:var(--ink2);font-size:15px;white-space:nowrap}
+.award{margin-top:36px;padding-top:28px;border-top:1px solid var(--line);display:flex;align-items:center;gap:18px}
+.award b{font-size:64px;font-weight:900;letter-spacing:-.04em;line-height:1;color:var(--red)}
+.award span{color:var(--ink2);line-height:1.3}
+@media (max-width:900px){.two{grid-template-columns:1fr}.panel{padding:28px 24px}}
+
+/* Contact */
+.contact{background:var(--red);color:#fff;padding:96px 0}
+.contact .wrap{display:grid;grid-template-columns:1.2fr .8fr;gap:40px;align-items:center}
+.contact h2{color:#fff}
+.contact p{font-size:21px;margin:18px 0 0;max-width:28em}
+.contact .cta{display:flex;flex-wrap:wrap;gap:14px}
+.contact .pill.w{background:#fff;color:#2c2c2c}
+.contact .pill.w:hover{background:#2c2c2c;color:#fff}
+.contact .pill.o{border-color:#fff;color:#fff}
+.contact .pill.o:hover{background:#fff;color:var(--red)}
+@media (max-width:860px){.contact .wrap{grid-template-columns:1fr}}
+
+footer{background:var(--bg2);border-top:1px solid var(--line);color:var(--ink2);font-size:14px;padding:22px 0}
+footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .hero .wrap>*{animation:none}
+  .card{transition:none}
+}
+</style>
+</head>
+<body>
+
+<nav aria-label="Primary">
+  <div class="wrap">
+    <a class="logo" href="#top"><i>PP</i>Pratheek P P</a>
+    <ul>
+      <li><a href="#work">Work</a></li>
+      <li><a href="#process">Process</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#skills">Skills</a></li>
+    </ul>
+    <a class="pill red" href="#contact">Get in touch</a>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="wrap">
+    <div>
+      <p class="role">Product Manager, Digital Transformation at Bren Tech</p>
+      <h1>Making real estate feel simple.</h1>
+      <p class="lede">I build the software layer behind how real estate runs at Bren, from an ERPNext-based in-house ERP to the apps in our customers’ and partners’ hands.</p>
+      <div class="cta">
+        <a class="pill red" href="#work">See my work</a>
+        <a class="pill line" href="#experience">View experience</a>
+      </div>
+    </div>
+    <div class="art" role="img" aria-label="Icons for Bren Homes, Bren Leads and the in-house ERP">
+      <div class="ic a">Bh</div>
+      <div class="ic b">Bl</div>
+      <div class="ic c">Er</div>
+    </div>
+  </div>
+</header>
+
+<div class="band">
+  <div class="wrap">
+    <div class="fact"><b>4+ yrs</b><span>at Bren Corporation</span></div>
+    <div class="fact"><b>2</b><span>mobile apps led end to end</span></div>
+    <div class="fact"><b>5×</b><span>Employee of the Month</span></div>
+    <div class="fact"><b>3</b><span>progressive roles at Bren</span></div>
+  </div>
+</div>
+
+<section id="work">
+  <div class="wrap">
+    <div class="sh">
+      <h2>Products taken from idea to production.</h2>
+      <p>The goal behind all of them: replace manual handoffs with a single source of truth.</p>
+    </div>
+    <div class="cards">
+      <article class="card">
+        <div class="ic o">Bh</div>
+        <div class="k">Mobile app for residents</div>
+        <h3>Bren Homes</h3>
+        <p>The resident app, built around the customer’s journey.</p>
+        <div class="chips"><span class="chip">Resident experience</span><span class="chip">Customer journey</span></div>
+      </article>
+      <article class="card">
+        <div class="ic u">Bl</div>
+        <div class="k">Platform for channel partners</div>
+        <h3>Bren Leads</h3>
+        <p>Moved the entire empanelment-to-commission journey onto one flow.</p>
+        <div class="chips"><span class="chip">Registration</span><span class="chip">Lead generation</span><span class="chip">Site-visit booking</span><span class="chip">Real-time tracking</span><span class="chip">Invoicing</span></div>
+      </article>
+      <article class="card">
+        <div class="ic p">Er</div>
+        <div class="k">Internal platform</div>
+        <h3>In-house ERP</h3>
+        <p>Built on ERPNext and developed through discovery with Bren’s business teams, then taken into live operations.</p>
+        <div class="chips"><span class="chip">ERPNext</span><span class="chip">Live operations</span></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="alt" id="process">
+  <div class="wrap">
+    <div class="sh">
+      <h2>The full product lifecycle.</h2>
+      <p>From the first conversation with a business team to iteration in live operations.</p>
+    </div>
+    <div class="flow">
+      <div class="fs"><i>1</i><b>Discovery</b></div>
+      <div class="fs"><i>2</i><b>Specs</b></div>
+      <div class="fs"><i>3</i><b>Sprint planning</b></div>
+      <div class="fs"><i>4</i><b>UAT</b></div>
+      <div class="fs"><i>5</i><b>Launch</b></div>
+      <div class="fs"><i>6</i><b>Iteration</b></div>
+    </div>
+  </div>
+</section>
+
+<section id="experience">
+  <div class="wrap">
+    <div class="sh">
+      <h2>Experience.</h2>
+      <p>Four years at Bren, after nearly four years in talent acquisition.</p>
+    </div>
+    <div class="rows">
+      <div class="row">
+        <div class="when">May 2026 – Present</div>
+        <div><h3>Product Manager<span class="badge">Current</span></h3><div class="org">Bren Corporation, Bengaluru</div></div>
+      </div>
+      <div class="row">
+        <div class="when">June 2023 – April 2026</div>
+        <div><h3>Assistant Product Manager</h3><div class="org">Bren Corporation, Bengaluru</div></div>
+      </div>
+      <div class="row">
+        <div class="when">June 2022 – June 2023</div>
+        <div><h3>Product Management Executive</h3><div class="org">Bren Corporation, Bengaluru</div></div>
+      </div>
+      <div class="row">
+        <div class="when">July 2018 – April 2022</div>
+        <div><h3>Senior Talent Acquisition Specialist</h3><div class="org">SSi People, Bengaluru</div>
+        <p>Sourced, screened and qualified candidates, ran interviews, managed candidate and client communication, and designed, negotiated and closed job offers.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="alt" id="skills">
+  <div class="wrap">
+    <div class="sh"><h2>Skills and credentials.</h2></div>
+    <div class="two">
+      <div class="panel">
+        <h3>Skills</h3>
+        <div class="skills">
+          <span class="chip">Software Product Management</span>
+          <span class="chip">Product Planning</span>
+          <span class="chip">AI for Product-Led Growth</span>
+          <span class="chip">Product Lifecycle Management</span>
+          <span class="chip">Cross-Functional Leadership</span>
+          <span class="chip">UX &amp; Usability Testing</span>
+          <span class="chip">Market &amp; Competitive Research</span>
+          <span class="chip">Agile / Scrum</span>
+        </div>
+        <div class="award"><b>5×</b><span>Employee of the Month<br>at Bren Corporation</span></div>
+      </div>
+      <div class="panel">
+        <h3>Certifications</h3>
+        <ul>
+          <li>AI for Product Management</li>
+          <li>Product Management: Building a Product Roadmap</li>
+          <li>Product Management Launchpad</li>
+          <li>Jira Fundamentals <small>Badge</small></li>
+          <li>Beginner’s Guide to Agile in Jira <small>Badge</small></li>
+        </ul>
+        <h3 style="margin-top:34px">Education</h3>
+        <ul>
+          <li><span>B.E., Computer and Information Sciences<br><small style="white-space:normal">Visvesvaraya Technological University</small></span><small>2014 – 2018</small></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div>
+      <h2>Let’s build something simple.</h2>
+      <p>Reach out for collaboration, opportunities, or to exchange insights on product management.</p>
+    </div>
+    <div class="cta">
+      <a class="pill w" href="mailto:pratheekmonappa7@gmail.com">Send an email</a>
+      <a class="pill o" href="https://www.linkedin.com/in/pratheekmonnappa" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 Pratheek P P. Bengaluru, India.</span>
+    <a href="#top">Back to top</a>
+  </div>
+</footer>
+
+</body>
+</html>
